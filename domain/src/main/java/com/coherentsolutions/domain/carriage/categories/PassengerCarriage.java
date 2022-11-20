@@ -33,7 +33,7 @@ public class PassengerCarriage implements Carriage {
                 if (!passengerMap.containsKey((((Passenger) passenger).getTicket().getSeatNumber()))){
                     passengerMap.put(((Passenger) passenger).getTicket().getSeatNumber(), (Passenger) passenger);
                     log.info("Passenger " + passenger + " has the seat: " + ((Passenger) passenger).getTicket().getSeatNumber());
-                } else log.warning(((Passenger) passenger).getTicket().getSeatNumber() + " seat taken");
+                } else log.warning(((Passenger) passenger).getTicket().getSeatNumber() + " seat taken"); //!
             } else log.warning("No available seats");
         } else log.warning("Not valid passenger");
     }

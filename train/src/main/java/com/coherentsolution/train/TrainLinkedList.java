@@ -1,5 +1,4 @@
 package com.coherentsolution.train;
-import java.io.*;
 
 public class TrainLinkedList<E>{
     Node head = new Node();
@@ -44,8 +43,8 @@ public class TrainLinkedList<E>{
         if(n == null || n.next == null){
             return false;
         }
-        n = n.next;
-        return true;
+        n = n.next;  //!
+        return true;  //!
     }
 
     public int getLength(){

@@ -20,6 +20,7 @@ public class DriverCarriage implements Carriage {
     }
     private static final Logger log = Logger.getLogger(DriverCarriage.class.getName());
 
+
     @Override
     public void addLoad(CarriageHelper driver) {
         if (driver.getClass().getName().equals("com.coherentsolutions.domain.load.Driver")){
@@ -27,11 +28,16 @@ public class DriverCarriage implements Carriage {
                 if (((User) driver).getAge()>= 18){
                     driverList.add((Driver) driver);
                     log.info("Driver: " + driver);
-                } else {log.warning("Driver not of age: " + ((User) driver).getAge());}
-            } else {log.warning("Not more than one driver");}
+                } else {log.warning("Driver not of age: " + ((User) driver).getAge());}   //!
+            } else {log.warning("Not more than one driver");}   //!
         } else {log.warning("Not valid driver");
     }
     }
+
+    public List<User> getDriverList() {
+        return driverList;
+    }
+
     @Override
     public String toString() {
         return "Driver carriage: " + idNumber + "driver: " + driverList;
